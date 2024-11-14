@@ -1,0 +1,166 @@
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cards de Produtos</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card-image {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .card-content {
+        padding: 15px;
+      }
+
+      .card-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px;
+      }
+
+      .card-description {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 15px;
+        line-height: 1.4;
+      }
+
+      .card-price {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #2563eb;
+        margin-bottom: 15px;
+      }
+
+      .buy-button {
+        display: inline-block;
+        width: 100%;
+        padding: 10px;
+        background-color: #2563eb;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      .buy-button:hover {
+        background-color: #1d4ed8;
+      }
+
+      @media (max-width: 768px) {
+        .products-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 480px) {
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="products-grid">
+        <!-- Card 1 -->
+        <div class="card">
+          <img
+            src="assets/Image.png"
+            alt="Tênis Esportivo"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h3 class="card-title">Tênis Esportivo</h3>
+            <p class="card-description">
+              Tênis confortável para corrida e academia, com tecnologia de
+              amortecimento avançada.
+            </p>
+            <p class="card-price">R$ 299,90</p>
+            <a href="#" class="buy-button">Comprar Agora</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <img src="assets/Image.png" alt="Smartwatch Pro" class="card-image" />
+          <div class="card-content">
+            <h3 class="card-title">Smartwatch Pro</h3>
+            <p class="card-description">
+              Relógio inteligente com monitor cardíaco e GPS integrado.
+            </p>
+            <p class="card-price">R$ 899,90</p>
+            <a href="#" class="buy-button">Comprar Agora</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+          <img src="assets/Image.png" alt="Fone Bluetooth" class="card-image" />
+          <div class="card-content">
+            <h3 class="card-title">Fone Bluetooth</h3>
+            <p class="card-description">
+              Fone sem fio com cancelamento de ruído e bateria de longa duração.
+            </p>
+            <p class="card-price">R$ 459,90</p>
+            <a href="#" class="buy-button">Comprar Agora</a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+          <img
+            src="assets/Image.png"
+            alt="Mochila Executiva"
+            class="card-image"
+          />
+          <div class="card-content">
+            <h3 class="card-title">Mochila Executiva</h3>
+            <p class="card-description">
+              Mochila resistente à água com compartimento para notebook.
+            </p>
+            <p class="card-price">R$ 199,90</p>
+            <a href="#" class="buy-button">Comprar Agora</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
